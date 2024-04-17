@@ -1,13 +1,4 @@
-
-<script setup lang="ts">
-import testItem from '../components/itemTest.vue'
-</script>
-
 <template>
-  <testItem>
-    
-  </testItem>
-
   <div class="about">
     <h1>This is an about page</h1>
   </div>

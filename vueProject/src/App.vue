@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 </script>
@@ -11,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/" v-for="item of ['teste', 'teste1']">Home {{ item }}</RouterLink>
+        <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
