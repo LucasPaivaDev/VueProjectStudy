@@ -4,14 +4,35 @@
     v-bind:key="obj.id"
   /> -->
 
+
+  <!-- <img src="https://via.placeholder.com/150" alt="teste">   -->
+
   <div
-  v-for="obj in teste"
+    v-for="(obj,index) in teste"
     v-bind:key="obj.id"
+    class="items"
   >
-    {{ obj.title }}
+    <img 
+      v-if="obj.imgSrc"
+      v-bind:src="obj.imgSrc" 
+      alt="teste"
+    >
+
+    {{ index }} - {{ obj.title }}
 
   </div>
 </template>
+
+<style>
+  .items {
+    background: #fff;
+    color: #000;
+    margin: 0 0 5px 0;
+    padding: 3px 6px;
+
+  }
+
+</style>
 
 <script>
 import { RouterLink, RouterView } from 'vue-router'
@@ -27,18 +48,22 @@ export default {
 
   data() {
     return {
+      
       teste: [
         {
           "userId": 1,
           "id": 1,
           "title": "delectus aut autem",
-          "completed": false
+          "completed": false,
+          "imgSrc": 'https://via.placeholder.com/150',
         },
         {
           "userId": 1,
           "id": 2,
           "title": "quis ut nam facilis et officia qui",
-          "completed": false
+          "completed": false,
+          "imgSrc": 'https://via.placeholder.com/150',
+
         },
         {
           "userId": 1,
